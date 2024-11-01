@@ -1,0 +1,73 @@
+@media (min-width: 200px){
+    .stat_bars{
+        width: 10px;
+    }
+
+    #stat{
+        gap: 4px;
+    }
+}
+
+
+@media (min-width : 768px){
+    .dashboard{
+        padding: 20px 30px 20px 80px;
+    }
+
+    .summary{
+        gap: 20px;
+    }
+
+    .dashboard .summary h1{
+        font-size: 22px;
+    }
+
+    .summary_wrapper{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card{
+        width: 260px;
+    }
+
+    .registration-img h2{
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 12px;
+    text-align: left;
+    
+    }
+
+
+    #stat{
+        gap: 10px;
+    }
+
+    .stat_bars{
+        width: 20px;
+    }
+    .stat_month_lg{
+        display: block;
+    }
+
+    .stat_month_sm{
+        display: none;
+    }
+}
+
+@media (min-width: 1024px){
+    .dashboard{
+        padding: 50px 20px 20px 120px;
+    }
+    #content_container{
+        flex-direction: row;
+        align-items: start;
+    }
+    
+    .registration{
+        padding: 40px;
+        height: 320px;
+    }
+}

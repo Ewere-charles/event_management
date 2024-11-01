@@ -1,0 +1,190 @@
+
+/* sm (Small devices, 640px and up) */
+@media (min-width: 640px) {
+    
+}
+
+
+
+
+
+/* Medium devices and up (768px and up) */
+@media (min-width: 768px) {
+    .nav{
+        background-color: transparent;
+        width: auto;
+    }
+    #hamburger{
+        display: none;
+    }
+    .side_nav {
+        background-color: var(--primary-dark);
+        position: fixed;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        padding: 16px;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 240px;
+    }
+
+    .menu {
+        max-width: none;
+        width: 208px;
+        margin: 70px auto;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        gap: 10px;
+    }
+
+    .menu_item {
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        gap: 16px;
+        padding: 8px;
+        width: 100%;
+    }
+
+    .activeNav {
+        position: static;
+        background-color: var(--new-select);
+        color: var(--active);
+    }
+
+    .activeNav::before {
+        display: none;
+    }
+
+    .activeNav svg path {
+        stroke: var(--active);
+    }
+
+    .sub_active {
+        background-color: var(--sa);
+        color: var(--active_svg);
+        border-radius: 50%;
+    }
+
+    .sub_active svg path {
+        stroke: var(--active_svg);
+        fill: none;
+    }
+
+    .sub_active::before {
+        display: none;
+    }
+
+    .notification,
+    .settings,
+    .messages,
+    .collapse,
+    .themeToggle_wrapper {
+        display: flex;
+    }
+
+    .profile {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 12px;
+        padding: 8px;
+    }
+
+    .profile div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile > span {
+        display: none;
+    }
+
+    .profile svg {
+        flex-shrink: 0;
+        width: 32px;
+    }
+    
+
+  .themeToggle_wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px;
+        font-size: 12px;
+    }
+
+
+    /* Slide animations */
+    @keyframes slideIn {
+        from {
+            width: 64px;
+        }
+        to {
+            width: 240px;
+        }
+    }
+
+    @keyframes slideOut {
+        from {
+            width: 240px;
+        }
+        to {
+            width: 64px;
+        }
+    }
+
+    .slide_in {
+        animation: slideIn .3s forwards ease;
+    }
+
+    .slide_out {
+        animation: slideOut .3s forwards ease;
+    }
+
+    /* Collapsed state styles */
+    .slide_out .collapse span {
+        display: none;
+    }
+
+    .slide_out .profile > div {
+        display: none;
+    }
+
+    @keyframes bug {
+        0%, 70% {
+            margin: 0;
+        }
+        100% {
+            margin: 0 auto;
+        }
+    }
+
+    .bug {
+        animation: bug .3s forwards ease;
+    }
+}
+
+
+
+/* lg (Large devices, 1024px and up) */
+@media (min-width: 1024px) {
+    
+}
+
+/* xl (Extra large devices, 1280px and up) */
+@media (min-width: 1280px) {
+    
+}
+
+/* 2xl (Double extra large devices, 1536px and up) */
+@media (min-width: 1536px) {
+    
+}

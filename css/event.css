@@ -1,0 +1,336 @@
+
+.event{
+    max-width:1076px;
+    width: 100%;
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: var(--bs);
+    padding: 8px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.event h3{
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 16px;
+    margin-bottom: 5px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width:100%;
+    height: 36px;
+    padding: 8px 8px;
+    gap: 8px;
+    border-radius: 2px 0px 0px 0px;
+    opacity: 0px;
+    background-color: var(--primary-dark);
+    border-radius: 2px;
+    box-shadow: var(--bs);
+}
+
+.search-bar input {
+    background: none;
+    border: none;
+    color: var(--text);
+    width: 100%;
+    outline: none;
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+select {
+    width:100%;
+    height: 36px;
+    padding: 8px 8px;
+    gap: 8px;
+    border-radius: 2px 0px 0px 0px;
+    opacity: 0px;
+    background-color: var(--primary-dark);
+    color: var(--text);
+    border-radius: 2px;
+    box-shadow: var(--bs);
+    outline: none;
+    border: none;
+}
+
+#sortOrder{
+    width: 140px;
+}
+
+.results-info {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 14px;
+}
+
+.sort_wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.download_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.events-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--primary-dark);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Hide date and speaker columns by default */
+.events-table th:nth-child(2),
+.events-table th:nth-child(3),
+.events-table td:nth-child(2),
+.events-table td:nth-child(3) {
+    display: none;
+}
+
+.events-table th {
+    padding:0 16px;
+    text-align: left;
+    background-color: var(--sub_bg);
+    color: var(--th);
+    height: 48px;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    text-align: left;
+
+}
+
+.events-table td {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    padding: 0 16px;
+    height: 48px;
+}
+
+.events-table td:last-child{
+    width: 99px;
+}
+
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 100px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 99px;
+}
+
+.status-completed {
+    background-color: var(--status_bg_completed);
+    color: var(--status_completed);
+    border: solid var(--completed_br) 1.5px;
+}
+
+.status-inprogress {
+    background-color: var(--status_bg_inprogress);
+    color: var(--status_inprogress);
+    border: solid var(--inprogress_br) 1.5px;
+}
+
+.status-upcoming {
+    background-color: var(--status_bg_upcoming);
+    color: var(--status_upcoming);
+    border: solid var(--upcoming_br) 1.5px;
+}
+
+.status-completed svg{
+    fill: var(--status_completed);
+}
+.status-inprogress svg {
+    fill: var(--status_inprogress);
+}
+
+.status-upcoming svg {
+    fill: var(--status_upcoming);
+}
+
+.table-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.rows-per-page {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rows-per-page span{
+    display: none;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: var(--text);
+}
+
+.pagination button {
+    border: none;
+    background-color: transparent;
+    color: var(--text);
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    min-width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+
+.pagination button.active {
+    background-color: var(--sm_active);
+    color: #FFFFFF;
+}
+
+.pagination button:first-child,
+.pagination button:last-child{
+    border-radius: 4px;
+    background-color: var(--active_pagins);
+    color: var(--sm_active);
+}
+
+
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination .ellipsis {
+    color: #fff;
+    padding: 0 8px;
+}
+
+.setting_wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.optionalSetting{
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-dark);
+    color: var(--text);
+    border-radius: 2px;
+    box-shadow: var(--bs);
+}
+
+
+.optionalSetting svg path{
+    stroke: var(--text);
+}
+.export-btn {
+    width: 140px;
+    background-color: var(--primary-dark);
+    color: var(--text);
+    border-radius: 2px;
+    box-shadow: var(--bs);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    gap: 5px;
+    padding: 8px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.export-btn svg path{
+    stroke: var(--text);
+}
+
+@media (min-width: 768px){
+    .events-table{
+        min-width: 600px;
+    }
+
+    .rows-per-page span{
+        display: inline;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .search-bar {
+        width:200px;
+    }
+
+    select{
+        width: 120px;
+    }
+
+    .filters,
+    .download_wrapper{
+        flex-direction: row;
+    }
+
+    /* Show date and speaker columns on larger screens */
+    .events-table th:nth-child(2),
+    .events-table th:nth-child(3),
+    .events-table td:nth-child(2),
+    .events-table td:nth-child(3) {
+        display: table-cell;
+    }
+
+    .events-table td:last-child{
+        width: auto;
+    }
+}
