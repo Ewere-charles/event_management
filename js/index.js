@@ -1095,6 +1095,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function createOptionsMenu() {
     const optionsButton = document.querySelector('.optionalSetting');
+    // Make the button container relative
+    optionsButton.style.position = 'relative';
+    
     const menu = document.createElement('div');
     menu.className = 'options-menu';
     menu.innerHTML = `
@@ -1108,20 +1111,10 @@ function createOptionsMenu() {
 
     // Function to position the menu
     function positionMenu() {
-        const rect = optionsButton.getBoundingClientRect();
-        // Position the menu at the top of the button, aligned to the right
-        menu.style.position = 'fixed';
-        menu.style.top = `${rect.top}px`; // Align with the top of the button
-        menu.style.left = `${rect.right - menu.offsetWidth}px`; // Align to the right edge of the button
-        
-        // Ensure menu doesn't go off-screen
-        const menuRect = menu.getBoundingClientRect();
-        if (menuRect.right > window.innerWidth) {
-            menu.style.left = `${window.innerWidth - menuRect.width - 5}px`;
-        }
-        if (menuRect.top < 0) {
-            menu.style.top = '5px';
-        }
+        // Position the menu relative to its container
+        menu.style.position = 'absolute';
+        menu.style.top = '100%'; // Position below the button
+        menu.style.left = '0';
     }
 
     optionsButton.onclick = (e) => {
@@ -1131,7 +1124,7 @@ function createOptionsMenu() {
         if (existingMenu) {
             existingMenu.remove();
         } else {
-            document.body.appendChild(menu);
+            optionsButton.appendChild(menu); // Append to button instead of body
             positionMenu();
         }
     };

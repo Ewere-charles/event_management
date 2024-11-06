@@ -61,6 +61,9 @@
     .dashboard{
         padding: 50px 20px 20px 120px;
     }
+    .section{
+        padding: 50px 20px 20px 120px;
+    }
     #content_container{
         flex-direction: row;
         align-items: start;
